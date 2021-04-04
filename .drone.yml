@@ -1,0 +1,10 @@
+kind: pipeline
+type: docker
+name: portainer_stack_restarter
+steps:
+- name: docker-build
+  image: plugins/docker
+  repo: docker-registry.mattflower.local/mflower/portainer_stack_restarter
+  registry: docker-registry.mattflower.local
+  insecure: true
+  purge: false
